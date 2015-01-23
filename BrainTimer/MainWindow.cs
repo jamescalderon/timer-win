@@ -3,43 +3,33 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BrainTimer
+namespace Timer
 {
     public partial class MainWindow : Form
+
+       
     {
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            MainWindow wndw = new MainWindow(); 
+            wndw.Show();
         }
 
-        private void MainWindow_Resize(object sender, EventArgs e)
-        {
-            if (FormWindowState.Minimized == this.WindowState)
-            {
-                mynotifyicon.Visible = true;
-                mynotifyicon.ShowBalloonTip(500);
-                this.Hide();
-            }
-
-            else if (FormWindowState.Normal == this.WindowState)
-            {
-                mynotifyicon.Visible = true;
-            }
-        }
-
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e) 
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (string.Equals((sender as Button).Name, @"CloseButton"))
             {
-                
+
             }
             else
             {
@@ -48,14 +38,45 @@ namespace BrainTimer
             }
         }
 
-        private void ButtonFlasher_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void TimerMain_Tick(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void minimizeOnTimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ButtonStudy.Text = textBox1.Text;
+
         }
+
+        //private void MainWindow_SizeChanged(object sender, EventArgs e) //minimize/maximize form
+        //{
+        //    if (this.WindowState == FormWindowState.Minimized)
+        //    {
+        //        //mynotifyicon.Icon = BrainTimer.Properties.Resources.clock_black;
+        //    }
+        //}
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            mynotifyicon.Icon = Timer.Properties.Resources.clock_black;
+        }
+
+        private void MenuStrip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }
