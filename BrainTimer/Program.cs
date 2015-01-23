@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace BrainTimer
+namespace Timer
 {
     static class Program
     {
@@ -14,7 +14,8 @@ namespace BrainTimer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            //Application.Run(new MainWindow());
+            Application.Run(new taskbarTimer()); //run tasktray ApplicationContext
         }
 
        

@@ -1,4 +1,4 @@
-﻿namespace BrainTimer
+﻿namespace Timer
 {
     partial class MainWindow
     {
@@ -31,68 +31,49 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.mynotifyicon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.ButtonAbort = new System.Windows.Forms.Button();
             this.Help_About = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItemFromMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.Preferences_MinimizeWhenTimedFromMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.Preferences_AlwaysOnTop = new System.Windows.Forms.ToolStripMenuItem();
             this.PrefToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.ButtonBreak = new System.Windows.Forms.Button();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.TextBoxBreak = new System.Windows.Forms.TextBox();
-            this.ButtonStudy = new System.Windows.Forms.Button();
-            this.GroupBoxStudy = new System.Windows.Forms.GroupBox();
-            this.TextBoxStudy = new System.Windows.Forms.TextBox();
+            this.toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.minimizeOnTimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Label1 = new System.Windows.Forms.Label();
             this.TimerMain = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ButtonLeft = new System.Windows.Forms.Button();
+            this.ButtonBreak = new System.Windows.Forms.Button();
+            this.ButtonOne = new System.Windows.Forms.Button();
+            this.buttonL = new System.Windows.Forms.Button();
+            this.buttonR = new System.Windows.Forms.Button();
+            this.contextMenuStripNotifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.MenuStrip.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
-            this.GroupBoxStudy.SuspendLayout();
+            this.contextMenuStripNotifyIcon.SuspendLayout();
             this.SuspendLayout();
             // 
             // mynotifyicon
             // 
             this.mynotifyicon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.mynotifyicon.BalloonTipTitle = "BrainTimer";
-            this.mynotifyicon.Icon = ((System.Drawing.Icon)(resources.GetObject("mynotifyicon.Icon")));
-            this.mynotifyicon.Text = "BrainTimer";
+            this.mynotifyicon.BalloonTipTitle = "Timer";
+            this.mynotifyicon.Text = "Timer";
             this.mynotifyicon.Visible = true;
             this.mynotifyicon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // ButtonAbort
-            // 
-            this.ButtonAbort.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ButtonAbort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAbort.Location = new System.Drawing.Point(12, 271);
-            this.ButtonAbort.Name = "ButtonAbort";
-            this.ButtonAbort.Size = new System.Drawing.Size(156, 35);
-            this.ButtonAbort.TabIndex = 29;
-            this.ButtonAbort.Text = "Reset";
-            this.ButtonAbort.UseVisualStyleBackColor = true;
             // 
             // Help_About
             // 
             this.Help_About.Name = "Help_About";
-            this.Help_About.Size = new System.Drawing.Size(115, 22);
+            this.Help_About.Size = new System.Drawing.Size(152, 22);
             this.Help_About.Text = "&About";
             // 
             // HelpToolStripMenuItemFromMenuStrip
             // 
-            this.HelpToolStripMenuItemFromMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Help_About});
             this.HelpToolStripMenuItemFromMenuStrip.Name = "HelpToolStripMenuItemFromMenuStrip";
             this.HelpToolStripMenuItemFromMenuStrip.Size = new System.Drawing.Size(44, 20);
             this.HelpToolStripMenuItemFromMenuStrip.Text = "Help";
-            // 
-            // SaveToolStripMenuItem1
-            // 
-            this.SaveToolStripMenuItem1.Name = "SaveToolStripMenuItem1";
-            this.SaveToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
-            this.SaveToolStripMenuItem1.Text = "Save";
             // 
             // ToolStripSeparator6
             // 
@@ -113,11 +94,6 @@
             // 
             // PrefToolStripMenuItem
             // 
-            this.PrefToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Preferences_AlwaysOnTop,
-            this.Preferences_MinimizeWhenTimedFromMenuStrip,
-            this.ToolStripSeparator6,
-            this.SaveToolStripMenuItem1});
             this.PrefToolStripMenuItem.Name = "PrefToolStripMenuItem";
             this.PrefToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.PrefToolStripMenuItem.Text = "Preferences";
@@ -125,74 +101,35 @@
             // MenuStrip
             // 
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PrefToolStripMenuItem,
-            this.HelpToolStripMenuItemFromMenuStrip});
+            this.toolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(182, 24);
+            this.MenuStrip.Size = new System.Drawing.Size(234, 24);
             this.MenuStrip.TabIndex = 33;
             this.MenuStrip.Text = "MenuStrip1";
+            this.MenuStrip.Click += new System.EventHandler(this.MenuStrip_Click);
             // 
-            // ButtonBreak
+            // toolStripMenuItem
             // 
-            this.ButtonBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonBreak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ButtonBreak.Location = new System.Drawing.Point(9, 43);
-            this.ButtonBreak.Name = "ButtonBreak";
-            this.ButtonBreak.Size = new System.Drawing.Size(60, 60);
-            this.ButtonBreak.TabIndex = 15;
-            this.ButtonBreak.Text = "Break";
-            this.ButtonBreak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ButtonBreak.UseVisualStyleBackColor = true;
+            this.toolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alwaysOnTopToolStripMenuItem,
+            this.minimizeOnTimerToolStripMenuItem});
+            this.toolStripMenuItem.Name = "toolStripMenuItem";
+            this.toolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.toolStripMenuItem.Text = "Options";
             // 
-            // GroupBox1
+            // alwaysOnTopToolStripMenuItem
             // 
-            this.GroupBox1.Controls.Add(this.ButtonBreak);
-            this.GroupBox1.Controls.Add(this.TextBoxBreak);
-            this.GroupBox1.Location = new System.Drawing.Point(93, 9);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(75, 118);
-            this.GroupBox1.TabIndex = 32;
-            this.GroupBox1.TabStop = false;
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.alwaysOnTopToolStripMenuItem.Text = "Always On Top";
             // 
-            // TextBoxBreak
+            // minimizeOnTimerToolStripMenuItem
             // 
-            this.TextBoxBreak.Location = new System.Drawing.Point(9, 17);
-            this.TextBoxBreak.Name = "TextBoxBreak";
-            this.TextBoxBreak.Size = new System.Drawing.Size(60, 20);
-            this.TextBoxBreak.TabIndex = 17;
-            this.TextBoxBreak.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ButtonStudy
-            // 
-            this.ButtonStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonStudy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ButtonStudy.Location = new System.Drawing.Point(9, 43);
-            this.ButtonStudy.Name = "ButtonStudy";
-            this.ButtonStudy.Size = new System.Drawing.Size(60, 60);
-            this.ButtonStudy.TabIndex = 22;
-            this.ButtonStudy.Text = "Study";
-            this.ButtonStudy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ButtonStudy.UseVisualStyleBackColor = true;
-            // 
-            // GroupBoxStudy
-            // 
-            this.GroupBoxStudy.Controls.Add(this.textBox1);
-            this.GroupBoxStudy.Controls.Add(this.TextBoxStudy);
-            this.GroupBoxStudy.Controls.Add(this.ButtonStudy);
-            this.GroupBoxStudy.Location = new System.Drawing.Point(12, 9);
-            this.GroupBoxStudy.Name = "GroupBoxStudy";
-            this.GroupBoxStudy.Size = new System.Drawing.Size(75, 220);
-            this.GroupBoxStudy.TabIndex = 31;
-            this.GroupBoxStudy.TabStop = false;
-            // 
-            // TextBoxStudy
-            // 
-            this.TextBoxStudy.Location = new System.Drawing.Point(9, 17);
-            this.TextBoxStudy.Name = "TextBoxStudy";
-            this.TextBoxStudy.Size = new System.Drawing.Size(60, 20);
-            this.TextBoxStudy.TabIndex = 16;
-            this.TextBoxStudy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minimizeOnTimerToolStripMenuItem.Name = "minimizeOnTimerToolStripMenuItem";
+            this.minimizeOnTimerToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.minimizeOnTimerToolStripMenuItem.Text = "Minimize On Timer";
+            this.minimizeOnTimerToolStripMenuItem.Click += new System.EventHandler(this.minimizeOnTimerToolStripMenuItem_Click);
             // 
             // Label1
             // 
@@ -207,24 +144,84 @@
             // 
             this.TimerMain.Enabled = true;
             this.TimerMain.Interval = 1000;
+            this.TimerMain.Tick += new System.EventHandler(this.TimerMain_Tick);
             // 
-            // textBox1
+            // ButtonLeft
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(60, 20);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ButtonLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonLeft.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ButtonLeft.Location = new System.Drawing.Point(15, 27);
+            this.ButtonLeft.Name = "ButtonLeft";
+            this.ButtonLeft.Size = new System.Drawing.Size(100, 100);
+            this.ButtonLeft.TabIndex = 22;
+            this.ButtonLeft.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ButtonLeft.UseVisualStyleBackColor = true;
+            // 
+            // ButtonBreak
+            // 
+            this.ButtonBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonBreak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ButtonBreak.Location = new System.Drawing.Point(212, 40);
+            this.ButtonBreak.Name = "ButtonBreak";
+            this.ButtonBreak.Size = new System.Drawing.Size(60, 60);
+            this.ButtonBreak.TabIndex = 15;
+            this.ButtonBreak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ButtonBreak.UseVisualStyleBackColor = true;
+            // 
+            // ButtonOne
+            // 
+            this.ButtonOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonOne.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ButtonOne.Location = new System.Drawing.Point(15, 27);
+            this.ButtonOne.Name = "ButtonOne";
+            this.ButtonOne.Size = new System.Drawing.Size(100, 100);
+            this.ButtonOne.TabIndex = 22;
+            this.ButtonOne.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ButtonOne.UseVisualStyleBackColor = true;
+            // 
+            // buttonL
+            // 
+            this.buttonL.Location = new System.Drawing.Point(10, 40);
+            this.buttonL.Name = "buttonL";
+            this.buttonL.Size = new System.Drawing.Size(100, 100);
+            this.buttonL.TabIndex = 34;
+            this.buttonL.UseVisualStyleBackColor = true;
+            // 
+            // buttonR
+            // 
+            this.buttonR.Location = new System.Drawing.Point(120, 40);
+            this.buttonR.Name = "buttonR";
+            this.buttonR.Size = new System.Drawing.Size(100, 100);
+            this.buttonR.TabIndex = 35;
+            this.buttonR.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStripNotifyIcon
+            // 
+            this.contextMenuStripNotifyIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripTextBox2});
+            this.contextMenuStripNotifyIcon.Name = "contextMenuStripNotifyIcon";
+            this.contextMenuStripNotifyIcon.Size = new System.Drawing.Size(161, 76);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(182, 335);
-            this.Controls.Add(this.ButtonAbort);
+            this.ClientSize = new System.Drawing.Size(234, 152);
+            this.Controls.Add(this.buttonR);
+            this.Controls.Add(this.buttonL);
             this.Controls.Add(this.MenuStrip);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.GroupBoxStudy);
             this.Controls.Add(this.Label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HelpButton = true;
@@ -234,12 +231,11 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Timer";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            this.GroupBoxStudy.ResumeLayout(false);
-            this.GroupBoxStudy.PerformLayout();
+            this.contextMenuStripNotifyIcon.ResumeLayout(false);
+            this.contextMenuStripNotifyIcon.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,23 +244,25 @@
         #endregion
 
         private System.Windows.Forms.NotifyIcon mynotifyicon;
-        internal System.Windows.Forms.Button ButtonAbort;
         internal System.Windows.Forms.ToolStripMenuItem Help_About;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItemFromMenuStrip;
-        internal System.Windows.Forms.ToolStripMenuItem SaveToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripSeparator ToolStripSeparator6;
         internal System.Windows.Forms.ToolStripMenuItem Preferences_MinimizeWhenTimedFromMenuStrip;
         internal System.Windows.Forms.ToolStripMenuItem Preferences_AlwaysOnTop;
         internal System.Windows.Forms.ToolStripMenuItem PrefToolStripMenuItem;
         internal System.Windows.Forms.MenuStrip MenuStrip;
-        internal System.Windows.Forms.Button ButtonBreak;
-        internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.TextBox TextBoxBreak;
-        internal System.Windows.Forms.Button ButtonStudy;
-        internal System.Windows.Forms.GroupBox GroupBoxStudy;
-        internal System.Windows.Forms.TextBox TextBoxStudy;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Timer TimerMain;
-        private System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.Button ButtonLeft;
+        internal System.Windows.Forms.Button ButtonBreak;
+        internal System.Windows.Forms.Button ButtonOne;
+        private System.Windows.Forms.Button buttonL;
+        private System.Windows.Forms.Button buttonR;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem minimizeOnTimerToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripNotifyIcon;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
     }
 }

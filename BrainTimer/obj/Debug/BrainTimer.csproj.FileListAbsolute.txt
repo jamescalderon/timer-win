@@ -6,3 +6,5 @@ C:\Users\James\Documents\Visual Studio 2015\Projects\BrainTimer\BrainTimer\obj\D
 C:\Users\James\Documents\Visual Studio 2015\Projects\BrainTimer\BrainTimer\obj\Debug\BrainTimer.exe
 C:\Users\James\Documents\Visual Studio 2015\Projects\BrainTimer\BrainTimer\obj\Debug\BrainTimer.pdb
 C:\Users\James\Documents\Visual Studio 2015\Projects\BrainTimer\BrainTimer\obj\Debug\BrainTimer.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\BrainTimer.exe
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\BrainTimer.pdb
