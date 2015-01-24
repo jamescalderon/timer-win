@@ -1,0 +1,8 @@
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.Properties.Resources.resources
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.csproj.GenerateResource.Cache
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\bin\Debug\Timer.exe
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\bin\Debug\Timer.pdb
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.exe
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.pdb
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\DEV\BrainTimer\BrainTimer\obj\Debug\Timer.OptionsWindow.resources
